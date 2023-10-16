@@ -45,7 +45,6 @@ class VehicleController extends Controller
         $brands = $this->brandModel->get();
         $models = $this->vehicleModel->get();
         $vehicles = $this->vehicle->get();
-        // dd($vehicles);
 
         return view('vehicle.index', compact('brands', 'models', 'vehicles', 'logo'));
     }
@@ -71,7 +70,6 @@ class VehicleController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        // dd($data);
 
         $this->validate($request, [
             "name_vehicle" =>  'required',
